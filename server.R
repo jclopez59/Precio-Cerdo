@@ -48,7 +48,8 @@ shinyServer(function(input, output) {
     output$GrafREs <- renderPlot(qplot(Fecha, Precio, data=PrecioG(), shape = Region,
                                        color=Region, geom = c("point", "line"),
                                        main = "Precio Semanal", xlab = "Fecha",
-                                       ylab = "Precio Kg en Pie"))
+                                       ylab = "Precio Kg en Pie") + 
+                                   theme(legend.position="bottom"))
     
       })
 })
