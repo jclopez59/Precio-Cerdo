@@ -60,7 +60,7 @@ shinyUI(fluidPage(
                 h6("Zootecnista - Especialista en Estad'istica"),
                 h6("jclopez5@unal.edu.co - 300 322 3901"),
                 br(),
-                h5("Diego Giraldo"),
+                h5("Diego A. Giraldo C."),
                 h6("Administrador Agropecuario"),
                 h6("dagc32@gmail.com - 321 817 7447"),
                 br(),
