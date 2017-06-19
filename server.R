@@ -4,6 +4,7 @@ library(ggplot2)
 
 precio <- read.csv("Precio.csv", header = T)
 precio$Fecha <- as.Date(precio$Fecha, "%d/%m/%Y")
+precio$Varición <- c(0,diff(precio$Precio))
 attach(precio)
 
 
@@ -24,7 +25,7 @@ shinyServer(function(input, output) {
                               Region == levels(Region)[5], 4])
   
   
-  output$General <- renderTable(PrecioF() [,c(1, 4)])
+  output$General <- renderTable(data.frame(PrecioF() [,c(1, 4, 5)]))
   
   output$GrafxReg <- renderPlot({plot(PrecioF()[,2], PrecioF()[,4], pch = 16,
                                       main = paste("Precio Semanal", input$Region),
@@ -32,14 +33,14 @@ shinyServer(function(input, output) {
                                       ylab = "Precio Kg en Pie ($)", lwd = 2,
                                       panel.first =  grid(), type = "b")})
   
-  output$Var <- renderPlot({barplot(diff(PrecioF()[,4]),
-                                    main = "Variaci'on del Precio Respecto a la Semana Anterior",
-                                    xlab = "Fecha", ylab = "Variaci'on Precio", 
-                                    col = ifelse(diff(PrecioF()[,4]) < 0, 
+  output$Var <- renderPlot({barplot(PrecioF()[,5],
+                                    main = "Variación del Precio Respecto a la Semana Anterior",
+                                    xlab = "Fecha", ylab = "Variación Precio ($)", 
+                                    col = ifelse(PrecioF()[,5] < 0, 
                                                  "darkred", "darkgreen"))
     
-    output$Variacion <- renderTable({data.frame(Semana = PrecioF()[-1,1],
-                                                Var = diff(PrecioF()[,4]))})
+    #output$Variacion <- renderTable({data.frame(Semana = PrecioF()[-1,1],
+    #                                            Variación = diff(PrecioF()[,4]))})
     
     output$Resumen <- renderTable(data.frame(Ant(), Bog(), Caribe(), Eje(), Valle())
       
