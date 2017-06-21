@@ -21,12 +21,13 @@ shinyUI(fluidPage(
       selectInput("Region", "Región", choices = levels(Region)),
       hr(),
       br(),
-      #h6("Desarrollado por:"),
-      #tags$img(src = "ControlG.png", height = 100, width = 100),
+      h5("Desarrollado por:"),
+      tags$img(src = "ControlG.png", height = 100, width = 100),
       h5("Info:"),
-      h5("Juan C. López M."),
-      h6("jclopez5@unal.edu.co")
-      #h6("dagc32@gmail.com")
+      h6("jclopez59@gmail.com"),
+      h6("dagc32@gmail.com"),
+      br(),
+      h6("Fuente: Porkcolombia, Ronda de Precios.")
       ),
     
 
@@ -55,18 +56,18 @@ shinyUI(fluidPage(
         ),
         
        tabPanel("A Cerca de",
-                #tags$img(src = "ControlG.png", height = 200, width = 200,
-                #                 align = "center"),
-                #h3("Soluciones Estadísticas y Tecnológicas"),
-                #hr(),
                 h3("Desarrollado por:"),
+                tags$img(src = "ControlG.png", height = 200, width = 200,
+                                 align = "center"),
+                h3("Soluciones Estadísticas y Tecnológicas"),
+                hr(),
                 h4("Juan Carlos López M."),
                 h6("Zootecnista - Especialista en Estadística"),
                 h6("jclopez5@unal.edu.co - 300 322 3901"),
                 br(),
-                #h5("Diego A. Giraldo C."),
-                #h6("Administrador Agropecuario"),
-                #h6("dagc32@gmail.com - 321 817 7447"),
+                h4("Diego A. Giraldo C."),
+                h6("Administrador Agropecuario"),
+                h6("dagc32@gmail.com - 321 817 7447"),
                 br(),
                 h5("Este aplicativo sirve como fuente de consulta de los 
                    precios del cerdo en pie publicados por Porkcolombia semanalmente.
