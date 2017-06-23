@@ -4,7 +4,10 @@ library(ggplot2)
 
 precio <- read.csv("Precio.csv", header = T)
 precio$Fecha <- as.Date(precio$Fecha, "%d/%m/%Y")
-precio$Varición <- c(0,diff(precio$Precio))
+precio <- precio[order(precio[, 3], precio[, 2]), ]
+precio$Varicion <- c(0,diff(precio$Precio))
+
+
 attach(precio)
 
 
