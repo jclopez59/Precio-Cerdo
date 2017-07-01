@@ -5,7 +5,7 @@ library(ggplot2)
 precio <- read.csv("Precio.csv", header = T)
 precio$Fecha <- as.Date(precio$Fecha, "%d/%m/%Y")
 precio <- precio[order(precio[, 3], precio[, 2]), ]
-precio$Varicion <- c(0,diff(precio$Precio))
+precio$Variacion <- c(0,diff(precio$Precio))
 
 
 attach(precio)
@@ -43,7 +43,7 @@ shinyServer(function(input, output) {
                                                  "darkred", "darkgreen"))
     
     #output$Variacion <- renderTable({data.frame(Semana = PrecioF()[-1,1],
-    #                                            Variación = diff(PrecioF()[,4]))})
+    #                                            VariaciÃÂ³n = diff(PrecioF()[,4]))})
     
     output$Resumen <- renderTable(data.frame(Ant(), Bog(), Caribe(), Eje(), Valle())
       
@@ -53,6 +53,13 @@ shinyServer(function(input, output) {
                                        color=Region, geom = c("point", "line"),
                                        main = "Precio Semanal", xlab = "Fecha",
                                        ylab = "Precio Kg en Pie") + 
+                                   theme(legend.position="bottom"))
+    
+    output$GrafVar <- renderPlot(qplot(Fecha, Variacion, data=PrecioG(), shape = Region,
+                                       color=Region, geom = c("point", "line"),
+                                       main = "Variación del Precio Semanal", 
+                                       xlab = "Fecha",
+                                       ylab = "Variación Precio Kg en Pie") + 
                                    theme(legend.position="bottom"))
     
       })

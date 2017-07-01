@@ -35,6 +35,7 @@ Semana,Fecha,Region,Precio
 22,02/06/2017,Antioquia,4844
 23,09/06/2017,Antioquia,4790
 24,16/06/2017,Antioquia,4769
+25,23/06/2017,Antioquia,4779
 41,14/10/2016,Bogota,5308
 42,21/10/2016,Bogota,5385
 43,28/10/2016,Bogota,5591
@@ -71,6 +72,7 @@ Semana,Fecha,Region,Precio
 22,02/06/2017,Bogota,4979
 23,09/06/2017,Bogota,4964
 24,16/06/2017,Bogota,4956
+25,23/06/2017,Bogota,4968
 41,14/10/2016,Caribe,5051
 42,21/10/2016,Caribe,5132
 43,28/10/2016,Caribe,5164
@@ -107,6 +109,7 @@ Semana,Fecha,Region,Precio
 22,02/06/2017,Caribe,5251
 23,09/06/2017,Caribe,5202
 24,16/06/2017,Caribe,5166
+25,23/06/2017,Caribe,5131
 41,14/10/2016,Eje Cafetero,5369
 42,21/10/2016,Eje Cafetero,5390
 43,28/10/2016,Eje Cafetero,5499
@@ -143,6 +146,7 @@ Semana,Fecha,Region,Precio
 22,02/06/2017,Eje Cafetero,4993
 23,09/06/2017,Eje Cafetero,4971
 24,16/06/2017,Eje Cafetero,4889
+25,23/06/2017,Eje Cafetero,4916
 41,14/10/2016,Valle,5458
 42,21/10/2016,Valle,5589
 43,28/10/2016,Valle,5794
@@ -179,8 +183,9 @@ Semana,Fecha,Region,Precio
 22,02/06/2017,Valle,4872
 23,09/06/2017,Valle,4807
 24,16/06/2017,Valle,4696
-25,23/06/2017,Antioquia,4779
-25,23/06/2017,Bogota,4968
-25,23/06/2017,Eje Cafetero,4916
-25,23/06/2017,Caribe,5131
 25,23/06/2017,Valle,4635
+26,30/06/2017,Antioquia,4724
+26,30/06/2017,Bogota,4976
+26,30/06/2017,Eje Cafetero,4908
+26,30/06/2017,Caribe,5147
+26,30/06/2017,Valle,4534

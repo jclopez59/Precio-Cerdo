@@ -50,6 +50,7 @@ shinyUI(fluidPage(
         
         tabPanel("General",
                  plotOutput("GrafREs"),
+                 plotOutput("GrafVar"),
                  tableOutput("Resumen"),
                  h4("Fuente: Porkcolombia, Ronda de Precios."),
                  h6("https://asociados.porkcolombia.co/porcicultores/index.php?option=com_porcicultores&view=cifras&Itemid=104&ronda=2017")
