@@ -37,13 +37,13 @@ shinyServer(function(input, output) {
                                       panel.first =  grid(), type = "b")})
   
   output$Var <- renderPlot({barplot(PrecioF()[,5],
-                                    main = "Variación del Precio Respecto a la Semana Anterior",
-                                    xlab = "Fecha", ylab = "Variación Precio ($)", 
+                                    main = "VariaciÃ³n del Precio Respecto a la Semana Anterior",
+                                    xlab = "Fecha", ylab = "VariaciÃ³n Precio ($)", 
                                     col = ifelse(PrecioF()[,5] < 0, 
                                                  "darkred", "darkgreen"))
     
     #output$Variacion <- renderTable({data.frame(Semana = PrecioF()[-1,1],
-    #                                            VariaciÃÂ³n = diff(PrecioF()[,4]))})
+    #                                            VariaciÃÂÃÂ³n = diff(PrecioF()[,4]))})
     
     output$Resumen <- renderTable(data.frame(Ant(), Bog(), Caribe(), Eje(), Valle())
       
