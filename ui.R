@@ -41,7 +41,7 @@ shinyUI(fluidPage(
                  h6("https://asociados.porkcolombia.co/porcicultores/index.php?option=com_porcicultores&view=cifras&Itemid=104&ronda=2017")
         ),
         
-        #tabPanel("VariaciÃ³n Precio",
+        #tabPanel("Variación Precio",
         #         #plotOutput("Var"),
         #         tableOutput("Variacion"),
         #         h4("Fuente: Porkcolombia, Ronda de Precios."),
@@ -72,7 +72,7 @@ shinyUI(fluidPage(
                 br(),
                 h5("Este aplicativo sirve como fuente de consulta de los 
                    precios del cerdo en pie publicados por Porkcolombia semanalmente.
-                   La informaciÃ³n mostrada corresponde a datos disponibles en la 
+                   La información mostrada corresponde a datos disponibles en la 
                    pagina web https://asociados.porkcolombia.co/porcicultores/
                    index.php?option=com_porcicultores&view=cifras&Itemid=104&ronda=2017"))
         )
